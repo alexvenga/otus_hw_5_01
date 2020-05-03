@@ -1,0 +1,53 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "3d67712dd34919990390220992618739",
+    "packages": [
+        {
+            "name": "alexvenga/check-brackets-in-mathematical-expressions",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AlexVenga/check-brackets-in-mathematical-expressions.git",
+                "reference": "43f54073c6bee198ccf8e3650a2d35722bc47e3b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AlexVenga/check-brackets-in-mathematical-expressions/zipball/43f54073c6bee198ccf8e3650a2d35722bc47e3b",
+                "reference": "43f54073c6bee198ccf8e3650a2d35722bc47e3b",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AlexVenga\\BracketsService\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "AlexVenga",
+                    "email": "bubnov.alexey@gmail.com"
+                }
+            ],
+            "description": "Brackets Service",
+            "time": "2020-05-03T15:22:35+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "alexvenga/check-brackets-in-mathematical-expressions": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

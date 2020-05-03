@@ -1,0 +1,15 @@
+{
+  "name": "vendor_name/otus_hw_5_01",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "alex",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "alexvenga/check-brackets-in-mathematical-expressions": "dev-master"
+  }
+}
