@@ -1,8 +1,7 @@
-FROM ubuntu:18.04
-
-RUN apt-get update && \
-    apt-get install -y nginx php-cli htop sudo
-
-ENTRYPOINT ["nginx","-g","daemon off;"]
-
-EXPOSE 80
+FROM php:7.4-cli
+RUN apt-get update \
+    && docker-php-ext-install pcntl \
+    && docker-php-ext-install sockets
+COPY . /home/application
+WORKDIR /home/application
+CMD [ "php", "./console/run", "-f", "./config/config.defaul.yaml" ]

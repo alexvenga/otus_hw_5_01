@@ -1,0 +1,43 @@
+#!/usr/bin/env php
+<?php
+
+error_reporting(E_ALL);
+set_time_limit(0);
+
+require_once dirname(__DIR__) . '/vendor/autoload.php';
+
+use AlexVenga\Application\App;
+use AlexVenga\Application\Exceptions\SocketException;
+use Symfony\Component\Yaml\Exception\ParseException;
+
+try {
+
+    echo 'Start' . PHP_EOL;
+
+    $options = getopt("f:", ["file:"]);
+
+    $fileName = null;
+    if (isset($options['f'])) {
+        $fileName = $options['f'];
+    }
+    if (is_null($fileName) && isset($options['file'])) {
+        $fileName = $options['file'];
+    }
+    if (!$fileName) {
+        throw new Exception('You must specify settings file (-f [file_name] or --file=[file_name])');
+    }
+
+    $application = new App($fileName);
+
+    $application->run();
+
+} catch (SocketException $e) {
+    echo 'Socket Exception: ', $e->getMessage(), "\n";
+} catch (ParseException $e) {
+    echo 'Parse Exception: ', $e->getMessage(), "\n";
+} catch (Exception $e) {
+    echo 'Exception: ', $e->getMessage(), "\n";
+}
+
+echo 'Done' . PHP_EOL;
+

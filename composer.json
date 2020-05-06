@@ -1,15 +1,25 @@
 {
-  "name": "vendor_name/otus_hw_5_01",
-  "description": "description",
+  "name": "alexvenga/otus_hw_5_01",
+  "description": "Brackets Service in docker",
   "minimum-stability": "stable",
-  "license": "proprietary",
+  "license": "MIT",
   "authors": [
     {
-      "name": "alex",
-      "email": "email@example.com"
+      "name": "AlexVenga",
+      "email": "bubnov.alexey@gmail.com"
     }
   ],
+  "config": {
+    "php": ">=7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "AlexVenga\\Application\\": "src"
+    }
+  },
   "require": {
-    "alexvenga/check-brackets-in-mathematical-expressions": "dev-master"
+    "alexvenga/check-brackets-in-mathematical-expressions": "dev-master",
+    "symfony/yaml": "^5.0",
+    "ext-sockets": "*"
   }
 }
